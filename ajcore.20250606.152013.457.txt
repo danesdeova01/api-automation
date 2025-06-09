@@ -1,0 +1,161 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.9.1 built on Thursday Mar 31, 2022 at 05:00:07 PDT
+---- Dump Properties ---
+Dump file: ajcore.20250606.152013.457.txt
+Dump reason: java.lang.RuntimeException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.lang.RuntimeException: bad non-abstract method with no code: void org.codehaus.groovy.runtime.callsite.AbstractCallSite.<init>(org.codehaus.groovy.runtime.callsite.CallSiteArray, int, java.lang.String) on public class org.codehaus.groovy.runtime.callsite.AbstractCallSite
+	at org.aspectj.weaver.bcel.LazyMethodGen.<init>(LazyMethodGen.java:221)
+	at org.aspectj.weaver.bcel.LazyClassGen.<init>(LazyClassGen.java:360)
+	at org.aspectj.weaver.bcel.BcelObjectType.getLazyClassGen(BcelObjectType.java:561)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1699)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1650)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1417)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1192)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:549)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:385)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:115)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:51)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:642)
+	at org.codehaus.groovy.reflection.SunClassLoader.define(SunClassLoader.java:105)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.loadAbstract(GroovySunClassLoader.java:78)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<init>(GroovySunClassLoader.java:59)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<init>(GroovySunClassLoader.java:54)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.lambda$static$0(GroovySunClassLoader.java:40)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.doPrivileged(GroovySunClassLoader.java:50)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<clinit>(GroovySunClassLoader.java:37)
+	at org.codehaus.groovy.runtime.callsite.CallSiteGenerator.isCompilable(CallSiteGenerator.java:252)
+	at org.codehaus.groovy.reflection.CachedMethod.createStaticMetaMethodSite(CachedMethod.java:302)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.createStaticMetaMethodSite(StaticMetaMethodSite.java:114)
+	at groovy.lang.MetaClassImpl.createStaticSite(MetaClassImpl.java:3586)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallStaticSite(CallSiteArray.java:72)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:159)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:21)
+	at io.restassured.config.SSLConfig.<init>(SSLConfig.java:201)
+	at io.restassured.config.SSLConfig.<init>(SSLConfig.java:193)
+	at io.restassured.config.RestAssuredConfig.<init>(RestAssuredConfig.java:41)
+	at io.restassured.RestAssured.<clinit>(RestAssured.java:422)
+	at requests.ApiRequests.<clinit>(ApiRequests.java:8)
+	at tests.PositiveTests.testGetUserSuccess(PositiveTests.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:136)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:658)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:219)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:923)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:192)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at com.sun.proxy.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+org.gradle.internal.worker.tmpdir=D:\Course\Jayjay\PR 18 Modul 20\api-automation\build\tmp\test\work
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_171\jre\bin
+java.vm.version=25.171-b11
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.script=
+sun.java.launcher=SUN_STANDARD
+user.country=US
+sun.os.patch.level=
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=D:\Course\Jayjay\PR 18 Modul 20\api-automation
+java.runtime.version=1.8.0_171-b11
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\ASUS\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 10
+allure.results.directory=D:\Course\Jayjay\PR 18 Modul 20\api-automation\build\allure-results
+sun.jnu.encoding=Cp1252
+java.library.path=C:\Program Files\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\nodejs;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp2\php;C:\Program Files\PuTTY\;C:\Program Files\gradle-8.14.1-all\gradle-8.14.1\bin;C:\Users\ASUS\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python311\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ASUS\AppData\Local\GitHubDesktop\bin;C:\Users\ASUS\AppData\Roaming\Composer\vendor\bin;C:\Users\ASUS\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\bin;C:\Program Files\Java\jdk1.8.0_171\bin;;.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.0
+user.home=C:\Users\ASUS
+user.timezone=Asia/Bangkok
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=windows-1252
+java.specification.version=1.8
+junit.jupiter.extensions.autodetection.enabled=true
+java.class.path=D:\Course\Jayjay\PR 18 Modul 20\api-automation\build\classes\java\test;D:\Course\Jayjay\PR 18 Modul 20\api-automation\build\resources\test;D:\Course\Jayjay\PR 18 Modul 20\api-automation\build\classes\java\main;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.rest-assured\rest-assured\5.4.0\7ebfc6d591e132e7b39f13bac9280cc0e4fa4b\rest-assured-5.4.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.15.2\4724a65ac8e8d156a24898d50fd5dbd3642870b8\jackson-annotations-2.15.2.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.15.2\a6fe1836469a69b3ff66037c324d75fc66ef137c\jackson-core-2.15.2.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.15.2\9353b021f10c307c00328f52090de2bdb4b6ff9c\jackson-databind-2.15.2.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-testng\2.19.0\d0393816bec562abdf2fa0ea6cc2e376124792b7\allure-testng-2.19.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.testng\testng\7.5.1\6673f647a35826fb01ff3129edc241d88bd27b88\testng-7.5.1.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.rest-assured\xml-path\5.4.0\928041ca2ad08c45ce8008f0cf388297bdc06efe\xml-path-5.4.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.rest-assured\json-path\5.4.0\83ed73b55e45300209493294ddc09ca5f61c46b6\json-path-5.4.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy-json\4.0.16\a1033674f0502962728eec12c9536ef827736fdb\groovy-json-4.0.16.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy-xml\4.0.16\bcdc17895f0125721ff11d9a051b2fa77f2b262e\groovy-xml-4.0.16.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.rest-assured\rest-assured-common\5.4.0\bdb5a25ba37cade60641ce76f9dccbaa08e22ba3\rest-assured-common-5.4.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy\4.0.16\4b23ab8f542bbbb517061cf5a0d401b632de9832\groovy-4.0.16.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.5.13\efc110bad4a0d45cda7858e6beee1d8a8313da5a\httpmime-4.5.13.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest\2.2\1820c0968dba3a11a1b30669bb1f01978a91dedc\hamcrest-2.2.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.ccil.cowan.tagsoup\tagsoup\1.2.1\5584627487e984c03456266d3f8802eb85a9ce97\tagsoup-1.2.1.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.78\a3927de9bd6f351429bcf763712c9890629d8f51\jcommander-1.78.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.webjars\jquery\3.5.1\2392938e374f561c27c53872bdc9b6b351b6ba34\jquery-3.5.1.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.13\853b96d3afbb7bf8cc303fe27ee96836a10c1834\httpcore-4.4.13.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.11\3acb4705652e16236558f0f4f2192cc33c3bd189\commons-codec-1.11.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.11\68e9a6adf7cf8eb7e9d31bbc554c7c75eeaac568\commons-lang3-3.11.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-test-filter\2.19.0\2c1c47f8df4186ac51f5e4384c31d438d7c9fc73\allure-test-filter-2.19.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-java-commons\2.19.0\1029c66ee04891c9489783b1be006fa987387f75\allure-java-commons-2.19.0.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.30\b5a4b6d16ab13e34a88fae84c35cd5d68cac922c\slf4j-api-1.7.30.jar;C:\Users\ASUS\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-model\2.19.0\aa88eada548fa693791afcb10b0803f519d95cd6\allure-model-2.19.0.jar
+user.name=ASUS
+java.vm.specification.version=1.8
+sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+java.home=C:\Program Files\Java\jdk1.8.0_171\jre
+sun.arch.data.model=64
+user.language=en
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_171
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes
+java.vendor=Oracle Corporation
+org.gradle.test.worker=1
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=amd64
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty
